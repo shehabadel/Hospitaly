@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="636.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.Main_final2Controller">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="414.0" prefWidth="675.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="ALWAYS">
+         <children>
+            <Group layoutX="384.0" layoutY="211.0">
+               <children>
+                  <ImageView fitHeight="433.0" fitWidth="574.0" layoutX="-247.0" layoutY="-113.0">
+                     <image>
+                        <Image url="@../../resources/pics/1.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="txtPassword" layoutX="-8.0" layoutY="141.0" promptText="Enter your password">
+                     <effect>
+                        <DropShadow color="#0000005e" height="2.0" offsetY="1.0" radius="0.0" width="0.0" />
+                     </effect>
+                  </PasswordField>
+                  <TextField fx:id="txtID" layoutX="-8.0" layoutY="104.0" promptText="Enter your ID">
+                     <effect>
+                        <DropShadow color="#0000005e" height="4.0" offsetY="1.0" radius="0.5" width="0.0" />
+                     </effect>
+                  </TextField>
+                  <Button fx:id="loginBtn" layoutX="35.0" layoutY="186.0" mnemonicParsing="false" onAction="#LoginIN" prefHeight="34.0" prefWidth="62.0" text="Login">
+                     <effect>
+                        <ColorAdjust brightness="-0.07" contrast="0.12" saturation="-0.38" />
+                     </effect>
+                  </Button>
+               </children>
+            </Group>
+            <Label layoutX="417.0" layoutY="56.0" text="Hospitaly" textFill="#3f51b5">
+               <font>
+                  <Font name="Pacifico" size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="isConnected" layoutX="417.0" layoutY="538.0" text="Status" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
